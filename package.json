@@ -14,6 +14,9 @@
   },
   "author": "Jojo Johnson",
   "license": "ISC",
+  "engines": {
+    "node": "16.x"
+  },
   "bugs": {
     "url": "https://github.com/emmaohn/cse341_project2/issues"
   },
