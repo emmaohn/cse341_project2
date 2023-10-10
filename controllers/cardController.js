@@ -39,14 +39,11 @@ const getAll = async (req, res) => {
 
 const getSingle = async (req, res) => {
   const collection = req.params.collection;
-  // console.log(collection)
   const cardId = new ObjectId(req.params.id);
-  // console.log(req.params.id)
 
   const result = await mongodb.getDatabase().db().collection(collection + '_cards').find({ _id: cardId });
   result.toArray().then((cards) => {
     res.setHeader('content-type', 'application/json');
-    console.log(cards)
     res.status(200).json(cards[0]);
   })
 };
@@ -114,7 +111,6 @@ const updateCard = async (req, res) => {
   }
 
   const response = await mongodb.getDatabase().db().collection(collection + '_cards').replaceOne({ _id: cardId }, card);
-  // console.log(response);
   if (response.modifiedCount > 0) {
     res.status(204).send();
   } else {
@@ -126,7 +122,6 @@ const deleteCard = async (req, res) => {
   const collection = req.params.collection;
   const cardId = new ObjectId(req.params.id);
   const response = await mongodb.getDatabase().db().collection(collection + '_cards').deleteOne({ _id: cardId }, true);
-  // console.log(response);
   if (response.deletedCount > 0) {
     res.status(204).send();
   } else {

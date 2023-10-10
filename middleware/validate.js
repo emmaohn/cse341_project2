@@ -21,7 +21,6 @@ const validateCard = async (req, res, next) => {
             "image": "required|string"
         };
     }
-    console.log("This is the validator")
     await validator(req.body, validationRule, {}, (err, status) => {
         if (!status) {
             res.status(412)

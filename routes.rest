@@ -1,15 +1,15 @@
 ### get all cards
-GET http://localhost:8080/cards
-# GET https://cse341-project1-jojo.onrender.com/cards
+# GET http://localhost:8080/cards
+GET https://cse341-project2-jojo.onrender.com/cards
 
 
 ### get card by collection and id
-GET http://localhost:8080/cards/action/651494f7921a031b2c4d931e
-# GET https://cse341-project1-jojo.onrender.com/cards/action/650733317a9fdff3bcecfe43
+# GET http://localhost:8080/cards/action/65149534921a031b2c4d9320
+GET https://cse341-project2-jojo.onrender.com/cards/treasure/6514941d921a031b2c4d9316
 
 ### create action card
-POST http://localhost:8080/cards/action/ HTTP/1.1
-# POST https://cse341-project1-jojo.onrender.com/cards/action HTTP/1.1
+# POST http://localhost:8080/cards/action/ HTTP/1.1
+POST https://cse341-project2-jojo.onrender.com/cards/action HTTP/1.1
 content-type: application/json
 
 {
@@ -20,9 +20,26 @@ content-type: application/json
   "image": "/src/images/cellar.webp"
 }
 
+### put action card
+# PUT http://localhost:8080/cards/victory/651f1441d615c54c3b8d465c HTTP/1.1
+PUT https://cse341-project2-jojo.onrender.com/cards/action/651f1441d615c54c3b8d465c HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Estate",
+  "cost": 2,
+  "type": ["This is an update"],
+  "quantity": 24,
+  "image": "/src/images/estate.webp"
+}
+
+### delete action card
+# DELETE http://localhost:8080/cards/action/651f0cf4156d492746175851 HTTP/1.1
+DELETE https://cse341-project2-jojo.onrender.com/cards/action/651f1441d615c54c3b8d465c HTTP/1.1
+
 ### create victory card
-POST http://localhost:8080/cards/victory HTTP/1.1
-# POST https://cse341-project1-jojo.onrender.com/cards/victory HTTP/1.1
+# POST http://localhost:8080/cards/victory HTTP/1.1
+POST https://cse341-project2-jojo.onrender.com/cards/victory HTTP/1.1
 content-type: application/json
 
 {
@@ -35,37 +52,19 @@ content-type: application/json
 }
 
 ### put victory card
-PUT http://localhost:8080/cards/victory/651e21d43caae2d179966161 HTTP/1.1
-# PUT https://cse341-project1-jojo.onrender.com/cards/650733317a9fdff3bcecfe43 HTTP/1.1
+# PUT http://localhost:8080/cards/victory/651e21d43caae2d179966161 HTTP/1.1
+PUT https://cse341-project2-jojo.onrender.com/cards/victory/651f1499d615c54c3b8d465d HTTP/1.1
 content-type: application/json
 
 {
   "name": "Estate",
   "cost": 2,
   "type": "victory",
-  "value": "1",
-  "quantity": "24",
-  "image": "/src/images/estate.webp"
-}
-
-### put action card
-PUT http://localhost:8080/cards/victory/651e56f012f673963bc8244e HTTP/1.1
-# PUT https://cse341-project1-jojo.onrender.com/cards/650733317a9fdff3bcecfe43 HTTP/1.1
-content-type: application/json
-
-{
-  "name": "Estate",
-  "cost": 2,
-  "type": "ho dee hoooo",
-  "value": 1,
-  "quantity": 24,
+  "value": 2,
+  "quantity": 5,
   "image": "/src/images/estate.webp"
 }
 
 ### delete victory card
-DELETE http://localhost:8080/cards/victory/651e58311a4efd9b1f06cca2 HTTP/1.1
-# DELETE https://cse341-project1-jojo.onrender.com/cards/6511fc82bfdc1b4eb662f20c HTTP/1.1
-
-### delete action card
-DELETE http://localhost:8080/cards/action/651e21ab3caae2d179966160 HTTP/1.1
-# DELETE https://cse341-project1-jojo.onrender.com/cards/6511fc82bfdc1b4eb662f20c HTTP/1.1
+# DELETE http://localhost:8080/cards/victory/651e58311a4efd9b1f06cca2 HTTP/1.1
+DELETE https://cse341-project2-jojo.onrender.com/cards/victory/651f1499d615c54c3b8d465d HTTP/1.1
