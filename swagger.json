@@ -5,7 +5,7 @@
     "description": "CSE341 Contacts Project",
     "version": "1.0.0"
   },
-  "host": "https://cse341-project2-jojo.onrender.com",
+  "host": "cse341-project2-jojo.onrender.com",
   "basePath": "/",
   "schemes": [
     "http"
