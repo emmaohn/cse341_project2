@@ -6,7 +6,7 @@ const doc = {
     description: 'CSE341 Contacts Project',
   },
   // host: 'localhost:8080',
-  host: 'https://cse341-project2-jojo.onrender.com',
+  host: 'cse341-project2-jojo.onrender.com',
   schemes: ['http'],
 };
 
