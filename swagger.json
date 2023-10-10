@@ -5,18 +5,28 @@
     "description": "CSE341 Contacts Project",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "https://cse341-project2-jojo.onrender.com",
   "basePath": "/",
   "schemes": [
     "http"
   ],
   "paths": {
-    "/": {
+    "/login": {
       "get": {
         "description": "",
         "responses": {
-          "200": {
-            "description": "OK"
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/logout": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
           }
         }
       }
@@ -94,6 +104,12 @@
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "412": {
+            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
@@ -174,6 +190,12 @@
           "204": {
             "description": "No Content"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -198,6 +220,9 @@
         "responses": {
           "204": {
             "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
